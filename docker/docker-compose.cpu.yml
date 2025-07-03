@@ -1,0 +1,22 @@
+version: '3.8'
+
+# CPU-only fallback for systems without NVIDIA GPU
+services:
+  kokoro-tts:
+    image: ghcr.io/remsky/kokoro-fastapi-cpu:latest
+    container_name: nova-kokoro-tts-cpu
+    restart: unless-stopped
+    ports:
+      - "8880:8880"
+    volumes:
+      - kokoro-cache:/app/cache
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8880/v1/audio/voices"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 120s
+
+volumes:
+  kokoro-cache:
+    driver: local
