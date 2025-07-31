@@ -1,0 +1,6 @@
+# Nova TTS - CUDA 11.8 / Driver 470 compatible
+kokoro>=0.9.0
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+soundfile>=0.12.1
+numpy>=1.26.0

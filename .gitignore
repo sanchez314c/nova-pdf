@@ -1,0 +1,71 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+dist-electron/
+out/
+*.AppImage
+*.deb
+*.snap
+*.rpm
+*.pacman
+*.tar.gz
+
+# Compiled JS artifacts from TypeScript source (keep .ts, ignore compiled .js)
+src/shared/types.js
+src/**/*.js.map
+
+# Development
+.vite/
+*.local
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Test coverage
+coverage/
+.nyc_output/
+lcov.info
+
+# Cache
+.cache/
+*.tsbuildinfo
+.eslintcache
+.parcel-cache/
+
+# Electron
+release/
+.venv/
+archive/
+legacy/
+
+# Python (TTS server)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+tts-server/.venv/
+tts-server/__pycache__/
